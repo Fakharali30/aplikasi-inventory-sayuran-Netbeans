@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="510f7d5f-eaa7-4fb8-a42e-ca360920b2d9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="NTA" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     barang.`idbarang` AS barang_idbarang,
+     barang.`jenisbarang` AS barang_jenisbarang,
+     barang.`namabarang` AS barang_namabarang,
+     barang.`harga` AS barang_harga,
+     barang.`bobot` AS barang_bobot
+FROM
+     `barang` barang]]>
+	</queryString>
+	<field name="barang_idbarang" class="java.lang.String"/>
+	<field name="barang_jenisbarang" class="java.lang.String"/>
+	<field name="barang_namabarang" class="java.lang.String"/>
+	<field name="barang_harga" class="java.lang.String"/>
+	<field name="barang_bobot" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="102" y="3" width="400" height="34" uuid="bcc01c48-726f-4a10-8a17-c0bca93435c4"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. CIBODAS AGRO SEJAHTERA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="14" y="3" width="77" height="64" uuid="242ab15c-3ae7-4e12-b387-faa51a043f5a"/>
+				<imageExpression><![CDATA["C:\\Users\\FAKHAR\\Documents\\NetBeansProjects\\InventoriCibodas\\src\\img\\logo cibodas.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="116" y="37" width="373" height="18" uuid="69b4588c-6d3d-4bad-9a6c-a59814f302ec"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kompleks Golden Plaza Fatmawati, Jakarta Selatan 12420]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="55" width="373" height="20" uuid="a9b4ba66-1d56-4a72-9faf-438542126ba9"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Telepon: 021-75908065 Fax: 021-75903904]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="155" y="20" width="254" height="20" uuid="28c0827f-0d19-49c4-80d4-9600ebd11709"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Barang]]></text>
+			</staticText>
+			<line>
+				<reportElement x="22" y="10" width="498" height="1" uuid="2938acb3-b4b6-47c6-91c1-2fc08b955bf2"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="2" width="100" height="20" uuid="6a1e8765-5eeb-41d3-be4b-0d489a0f64f8"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ID Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="2" width="100" height="20" uuid="892b9ae4-1b20-482f-9309-d3fd64fa2256"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jenis Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="2" width="100" height="20" uuid="23babf6b-02bb-4163-ab08-7f6c42cf6d11"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="2" width="100" height="20" uuid="55490e6f-ea45-4677-9512-448f37435e81"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Harga Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="2" width="100" height="20" uuid="45010020-12ae-4cf5-ac0a-11b4f21f0bed"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Berat(kg)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="22" y="5" width="100" height="20" uuid="a24a6bd3-3b4f-4243-8805-c68ff6970eec"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{barang_idbarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="5" width="100" height="20" uuid="b19c1d82-e8ab-448e-8dfd-b816bc48f44f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{barang_jenisbarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="5" width="100" height="20" uuid="2245e737-0e69-4b2d-b102-c6705161f1de"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{barang_namabarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="5" width="100" height="20" uuid="e98e2d38-9304-4786-8798-d11b8734e301"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{barang_harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="5" width="100" height="20" uuid="1f95e366-dbea-4741-8abd-e570d87832ce"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{barang_bobot}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="147" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="433" y="13" width="122" height="20" uuid="9ae89778-aec1-4d33-bcf0-2b4e86eeac6c"/>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="435" y="88" width="105" height="20" uuid="203b85ef-44ad-4150-b020-7e517897ae3c"/>
+				<text><![CDATA[Atep Suhendar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="33" width="105" height="20" uuid="a77cc299-7636-4dac-bfa0-743631cfe332"/>
+				<text><![CDATA[Direktur Utama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="13" width="62" height="20" uuid="5e43f0d9-bc1c-42fc-98c7-edc7506d7e43"/>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<image>
+				<reportElement x="430" y="50" width="59" height="38" uuid="b22088b4-5386-4430-9d77-adc455ff7777"/>
+				<imageExpression><![CDATA["C:\\Users\\FAKHAR\\Documents\\NetBeansProjects\\InventoriCibodas\\src\\img\\stempel.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>
